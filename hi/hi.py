@@ -3,9 +3,6 @@ print("piiiii")
 import sqlite3
 con = sqlite3.connect('Prices.db')
 cur = con.cursor()
-cur.execute('''create table prices
-            (
-            id integer primary key,
-            price integer)''')
+cur.execute('''drop table prices''')
 con.commit()
 con.close()
